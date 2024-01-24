@@ -14,7 +14,9 @@ export default function App() {
     <div className="container">
       <h1>React Calculator</h1>
       <input defaultValue={input} />
-      {typeof answer || answer ? <div className="answer">{answer}</div> : null}
+      {answer != 0 && typeof answer ? (
+        <div className="answer">{answer}</div>
+      ) : null}
       <div className="keyContainer">
         <div className="keypad">
           <button onClick={update} className="key">
@@ -59,7 +61,7 @@ export default function App() {
           <button
             onClick={() => {
               setInput("");
-              setAnswer("");
+              setAnswer(0);
             }}
             className="key"
           >
