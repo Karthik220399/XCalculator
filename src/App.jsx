@@ -11,10 +11,10 @@ export default function App() {
     });
   };
   return (
-    <div key={"m11"} className="container">
+    <div className="container">
       <h1>React Calculator</h1>
       <input defaultValue={input} />
-      {answer.length > 0 ? <div className="answer">{answer}</div> : null}
+      {typeof answer || answer ? <div className="answer">{answer}</div> : null}
       <div className="keyContainer">
         <div className="keypad">
           <button onClick={update} className="key">
@@ -74,6 +74,7 @@ export default function App() {
                 setAnswer("Error");
               } else {
                 let ans = eval(input);
+                console.log(typeof ans);
                 setAnswer(ans);
               }
             }}
