@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div className="container">
       <h1>React Calculator</h1>
-      <input defaultValue={input} />
+      <input type="text" defaultValue={input} />
       {answer != 0 && typeof answer ? (
         <div className="answer">{answer}</div>
       ) : null}
