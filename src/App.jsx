@@ -14,7 +14,7 @@ export default function App() {
     <div key={"m11"} className="container">
       <h1>React Calculator</h1>
       <input defaultValue={input} />
-      {answer ? <div className="answer">{answer}</div> : null}
+      {answer.length > 0 ? <div className="answer">{answer}</div> : null}
       <div className="keyContainer">
         <div className="keypad">
           <button onClick={update} className="key">
