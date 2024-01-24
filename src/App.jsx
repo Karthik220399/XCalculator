@@ -59,7 +59,7 @@ export default function App() {
           <button
             onClick={() => {
               setInput("");
-              setAnswer();
+              setAnswer("");
             }}
             className="key"
           >
